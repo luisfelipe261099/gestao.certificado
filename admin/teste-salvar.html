@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Teste Salvar Posições</title>
+</head>
+
+<body>
+    <h1>Teste de Salvamento</h1>
+    <button onclick="testarSalvar()">Testar Salvar</button>
+    <pre id="resultado"></pre>
+
+    <script>
+        function testarSalvar() {
+            const resultado = document.getElementById('resultado');
+            resultado.textContent = 'Enviando...';
+
+            const dados = {
+                template_id: 24,
+                posicoes: [
+                    { tipo: 'customizado', id: '1', x: 100, y: 150 },
+                    { tipo: 'padrao', campo: 'curso', x: 200, y: 250 }
+                ]
+            };
+
+            console.log('Dados:', dados);
+
+            fetch('../app/actions/salvar-posicoes-template.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(dados)
+            })
+                .then(response => {
+                    console.log('Status:', response.status);
+                    return response.text();
+                })
+                .then(text => {
+                    console.log('Resposta RAW:', text);
+                    resultado.textContent = 'Resposta:\n' + text;
+                })
+                .catch(error => {
+                    console.error('Erro:', error);
+                    resultado.textContent = 'ERRO: ' + error.message;
+                });
+        }
+    </script>
+</body>
+
+</html>

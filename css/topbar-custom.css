@@ -1,0 +1,237 @@
+/**
+ * Topbar Custom Styles
+ * Melhorias visuais para a barra superior
+ */
+
+/* Topbar Principal */
+.topbar {
+    background-color: #b8208b !important;
+    border-bottom: none !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease;
+}
+
+.topbar:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Texto branco na topbar */
+.topbar .text-white {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+/* Links na topbar */
+.topbar .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    transition: all 0.2s ease;
+    padding: 0.5rem 0.75rem !important;
+    border-radius: 4px;
+}
+
+.topbar .nav-link:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Avatar Circle */
+.avatar-circle {
+    background: white !important;
+    color: #b8208b !important;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+}
+
+.avatar-circle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    border: none !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    animation: slideDown 0.2s ease !important;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dropdown Header */
+.dropdown-header {
+    background-color: #f5f7fa !important;
+    border-bottom: 2px solid #e9ecef !important;
+    font-weight: 600 !important;
+    color: #b8208b !important;
+    padding: 0.75rem 1rem !important;
+}
+
+/* Dropdown Items */
+.dropdown-item {
+    padding: 0.75rem 1rem !important;
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa !important;
+    border-left-color: #b8208b !important;
+    padding-left: 1.25rem !important;
+}
+
+.dropdown-item i {
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover i {
+    transform: scale(1.1);
+}
+
+/* Badge */
+.badge-counter {
+    position: absolute !important;
+    top: 5px !important;
+    right: 5px !important;
+    font-size: 0.65rem !important;
+    padding: 0.25rem 0.4rem !important;
+}
+
+/* Notificações */
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+.icon-circle.bg-primary {
+    background-color: #b8208b !important;
+}
+
+.icon-circle.bg-success {
+    background-color: #48bb78 !important;
+}
+
+.icon-circle.bg-warning {
+    background-color: #ed8936 !important;
+}
+
+.icon-circle.bg-danger {
+    background-color: #f56565 !important;
+}
+
+/* Topbar Divider */
+.topbar-divider {
+    border-right: 1px solid rgba(255, 255, 255, 0.3) !important;
+    height: 2rem;
+    margin: 0 1rem;
+}
+
+/* Sidebar Toggle */
+#sidebarToggleTop {
+    color: white !important;
+    transition: all 0.2s ease;
+}
+
+#sidebarToggleTop:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    transform: scale(1.1);
+}
+
+/* Badges */
+.badge-light {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    color: #b8208b !important;
+    font-weight: 600;
+    padding: 0.35rem 0.65rem !important;
+    border-radius: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .topbar {
+        padding: 0.5rem 1rem !important;
+    }
+
+    .topbar .nav-link {
+        padding: 0.5rem 0.5rem !important;
+    }
+
+    .dropdown-menu {
+        min-width: 200px !important;
+    }
+
+    .avatar-circle {
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 12px !important;
+    }
+}
+
+/* Animações */
+.animated--grow-in {
+    animation: growIn 0.2s ease !important;
+}
+
+@keyframes growIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Hover Effects */
+.dropdown-item.text-danger:hover {
+    background-color: #fff5f5 !important;
+    color: #c53030 !important;
+}
+
+/* Font Weight */
+.font-weight-600 {
+    font-weight: 600 !important;
+}
+
+/* Transições suaves */
+* {
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Dark Mode Support (opcional) */
+@media (prefers-color-scheme: dark) {
+    .dropdown-menu {
+        background-color: #2d3748 !important;
+        color: #e2e8f0 !important;
+    }
+
+    .dropdown-header {
+        background-color: #1a202c !important;
+        color: #b8208b !important;
+    }
+
+    .dropdown-item {
+        color: #e2e8f0 !important;
+    }
+
+    .dropdown-item:hover {
+        background-color: #4a5568 !important;
+    }
+}
+

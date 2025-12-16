@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Environment and sensitive configs
+.env
+*.env
+app/config/config.local.php
+
+# Logs
+logs/
+*.log
+
+# Uploads (user content)
+uploads/*
+!uploads/.gitkeep
+
+# IDE and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary and debug files
+*.sql
+cert_dump.txt
+output*.txt
+templates*.txt
+
+# Debug scripts (if any remain)
+**/diagnostico*.php
+**/debug-*.php
+
+# EAD node_modules (if present)
+ead/node_modules/
+ead/.next/
+ead/dist/
+
+# Cache
+*.cache
+.cache/
